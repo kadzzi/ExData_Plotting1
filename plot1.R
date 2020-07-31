@@ -1,0 +1,8 @@
+Data <- read.table(file="household_power_consumption.txt", header=TRUE, sep=";", na.strings="?")
+Start <- strptime("01/02/2007", format='%d/%m/%Y')
+End <- strptime("02/02/2007", format='%d/%m/%Y')
+DataSort <- subset(Data, strptime(Data$Date, format='%d/%m/%Y')>=Start & strptime(Data$Date, format='%d/%m/%Y')<=End)
+rm(Data)
+png(file="plot1.png",width=480,height=480)
+with(DataSort, hist(Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power"))
+dev.off()
