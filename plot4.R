@@ -12,6 +12,6 @@ with(DataSort, plot(DateTime, Sub_metering_1,type="l", ylab="Energy sub metering
 with(DataSort, lines(DateTime, Sub_metering_2,type="l", col="red"))
 with(DataSort, lines(DateTime, Sub_metering_3,type="l", col="blue"))
 legend("topright", lty = 1, col = c("black", "blue", "red"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n")
-with(DataSort, plot(DateTime, Global_reactive_power,type="l", ylab="Global Reactive Power", xlab="datetime"))
+with(DataSort, plot(DateTime, Global_reactive_power,type="l", ylab="Global_Reactive_Power", xlab="datetime"))
 dev.off()
 
